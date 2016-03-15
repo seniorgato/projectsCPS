@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Sign-In</title>
-    <link href="style-sign.css" rel="stylesheet" type="text/css">
-</head>
-<body id="body-color">
-    HEY YA MADE IT!!!
+<body>
+
+        <?php
+        $servername = "localhost";
+        $username = "seniorgato";
+        $password = "";
+        $dbname = "c9";
+        
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+             die("Connection failed: " . $conn->connect_error);
+        } 
+        
+        $sql = "SELECT * FROM TABLE_2";
+        $result = $conn->query($sql);
+        
+        if ($result->num_rows > 0) {
+             // output data of each row
+             while($row = $result->fetch_assoc()) {
+                 echo  $row["LastName"];
+                 $row["FirstName"] ;
+             }
+        } else {
+             echo "0 results";
+        }
+        
+        $conn->close();
+        ?>  
+
 </body>
 </html>
