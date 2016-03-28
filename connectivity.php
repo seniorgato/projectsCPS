@@ -18,7 +18,7 @@
                     echo " SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
                    
                 } else {
-                    echo "SORRY... YOU ENTERED WRONG ID AND PASSWORD... PLEASE RETRY...";
+                    echo "SORRY... YOU ENTERED WRONG ID AND PASSWORD... PLEASE RETRY...".  "<a href = index.php> click here </a>";
 
                 }
             }

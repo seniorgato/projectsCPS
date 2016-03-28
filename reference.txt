@@ -2,3 +2,4 @@ https://docs.c9.io/docs/setting-up-phpmyadmin
 http://mrbool.com/how-to-create-a-login-page-with-php-and-mysql/28656
 https://bbnewpaltz.sln.suny.edu/bbcswebdav/pid-1896235-dt-content-rid-2816344_2/courses/spring16_CPS493_02/P1.pdf
 https://bbnewpaltz.sln.suny.edu/bbcswebdav/pid-1896239-dt-content-rid-2816346_2/courses/spring16_CPS493_02/AdvisingProject_MajorPlan.jpg
+https://projects-cps-seniorgato.c9users.io/phpmyadmin
