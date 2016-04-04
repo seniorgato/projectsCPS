@@ -18,6 +18,11 @@
             $DeleteQuery = "DELETE FROM `TABLE 2` WHERE LastName='$_POST[hidden]'";
             mysql_query($DeleteQuery,$con);
         };
+        if(isset($_POST['add'])){
+            $AddQuery = "INSERT INTO `TABLE 2` (LastName, FirstName) VALUES( '$_POST[uLastName]','$_POST[uFirstName]')";
+            mysql_query($AddQuery,$con);
+            
+        };
         
         $sql= "SELECT * FROM `TABLE 2`";
         $myData=mysql_query($sql,$con);
@@ -32,12 +37,25 @@
             echo "<tr>";
             echo "<td>" . "<input type=text name=LastName value=" . $record['LastName'] . "> </td>";
             echo "<td>" . "<input type=text name=FirstName value=" . $record['FirstName'] . "> </td>";
-            echo "<td>" . "<input type=hidden name=hidden value=" .$record['LastName'] . "</td>";
-            echo "<td>" . "<input type=submit name=update value=update". "</td>";
-            echo "<td>" . "<input type=submit name=delete value=delete". "</td>";
+            echo "<td>" . "<input type=hidden name=hidden value=" .$record['LastName'] . "> </td>";
+            echo "<td>" . "<input type=submit name=update value=update>".  "</td>";
+            echo "<td>" . "<input type=submit name=delete value=delete>". "</td>";
+            echo "<td>" . "<button id="submit_data">Submit Data</button>". "</td>";
             echo "</tr>";
             echo "</form>";
         }
+        
+        echo "<form action=home.php method = post>";
+        echo "<tr>";
+        echo "<td><input type=text name=uLastName></td>";
+        echo "<td><input type=text name=uFirstName></td>";
+        echo "<td>" . "<input type=submit name=add value=add>". "</td>";
+        echo "</form>";
+        
+        
+        
+        
+        
         echo "</table>";
         mysql_close($con);
 ?>
