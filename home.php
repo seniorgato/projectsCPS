@@ -3,36 +3,44 @@
 <body>
 
     <?php
-        $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
-        $servername = "localhost";
-        $username = "seniorgato";
-        $password = "";
-        $dbname = "c9";
-        
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
-        
-        $sql = "SELECT * FROM `TABLE 2` ";
-        $result = $conn->query($sql);
-        
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo $row["COL 1"]. " &nbsp &nbsp  " . $row["COL 2"]. "<a href = courses.php> click here </a>"."<br>";
-            }
-        } else {
-            echo "0 results";
+        $con = mysql_connect("localhost","seniorgato","");
+        if(!$con){
+            die("Can't Connect:" . mysql_error());
         }
-        $conn->close();
+        mysql_select_db("c9",$con);
+        
+        if(isset($_POST['update'])){
+            $UpdateQuery = "UPDATE `TABLE 2` SET LastName='$_POST[LastName]', FirstName='$_POST[FirstName]' WHERE LastName='$_POST[hidden]'";
+            mysql_query($UpdateQuery,$con);
+            
+        };
+        if(isset($_POST['delete'])){
+            $DeleteQuery = "DELETE FROM `TABLE 2` WHERE LastName='$_POST[hidden]'";
+            mysql_query($DeleteQuery,$con);
+        };
+        
+        $sql= "SELECT * FROM `TABLE 2`";
+        $myData=mysql_query($sql,$con);
+        echo "<table border =1>
+        <tr>
+        <th>LastName</th>
+        <th>FirstName</th>
+        </tr>";
+        
+        while($record = mysql_fetch_array($myData)){
+            echo "<form action=home.php method = post>";
+            echo "<tr>";
+            echo "<td>" . "<input type=text name=LastName value=" . $record['LastName'] . "> </td>";
+            echo "<td>" . "<input type=text name=FirstName value=" . $record['FirstName'] . "> </td>";
+            echo "<td>" . "<input type=hidden name=hidden value=" .$record['LastName'] . "</td>";
+            echo "<td>" . "<input type=submit name=update value=update". "</td>";
+            echo "<td>" . "<input type=submit name=delete value=delete". "</td>";
+            echo "</tr>";
+            echo "</form>";
+        }
+        echo "</table>";
+        mysql_close($con);
 ?>
-<form action="test2.php" method="POST">
-    <input type="hidden" name="url" value="<?php echo $url ?>" >
-    <input type="submit" name="download" value="" onclick="alert('<?php echo $url; ?>')">
-</form>
 
 </body>
 </html>
