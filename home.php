@@ -40,7 +40,7 @@
             echo "<td>" . "<input type=hidden name=hidden value=" .$record['LastName'] . "> </td>";
             echo "<td>" . "<input type=submit name=update value=update>".  "</td>";
             echo "<td>" . "<input type=submit name=delete value=delete>". "</td>";
-            echo "<td>" . "<button id="submit_data">Submit Data</button>". "</td>";
+            //echo "<td>" . "<button id="submit_data">Submit Data</button>". "</td>";
             echo "</tr>";
             echo "</form>";
         }
