@@ -1,0 +1,24 @@
+
+.iconlogo1{
+    height: 115px;
+}
+
+.jumbotron{
+    background-image: url("http://irpri.org/Img/Gallery/12.jpg");
+}
+
+#review {
+    display: block;
+    padding: 10px;
+    margin-bottom: 100px; /* SIMPLY SET THIS PROPERTY AS MUCH AS YOU WANT. This changes the space below box1 */
+    text-align: justify;
+}
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+                width: 70%;
+                margin: auto;
+            }
+            body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}

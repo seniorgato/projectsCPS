@@ -1,0 +1,14 @@
+https://docs.c9.io/docs/setting-up-phpmyadmin
+http://mrbool.com/how-to-create-a-login-page-with-php-and-mysql/28656
+https://bbnewpaltz.sln.suny.edu/bbcswebdav/pid-1896235-dt-content-rid-2816344_2/courses/spring16_CPS493_02/P1.pdf
+https://bbnewpaltz.sln.suny.edu/bbcswebdav/pid-1896239-dt-content-rid-2816346_2/courses/spring16_CPS493_02/AdvisingProject_MajorPlan.jpg
+https://projects-cps-seniorgato.c9users.io/phpmyadmin
+https://www.youtube.com/watch?v=od0UM78JXg0
+phpmyadmin-ctl install
+http://stackoverflow.com/questions/10605456/selecting-one-row-from-mysql-query-php
+
+
+LastName,FirstName,MAT251-Calc-I,MAT252-Calc-II,MAT320-DiscreteMath,CPS210-CompSci-I,CPS310-CompSci-
+II,CPS31,CompSci-III,CPS352-OOP,CPS330-Assembly.Arch.,CPS353-SoftEng,CPS415-Disc.Cont.Algorithms,CPS340-
+Op.Sys,CPS425-Lang.Processing,CPS493-Elect-1,CPS493-Projects,EGC230-Dig.Logic,EGC208-Dig.Logic.Lab,SCIENCE-
+I,SCIENCE-II

@@ -1,0 +1,24 @@
+
+.iconlogo1{
+    height: 115px;
+}
+
+.jumbotron{
+    background-image: url("http://ldcss.s3-website-us-east-1.amazonaws.com/cms/asset/image/CourseHeros760x300-Excel.png-1295884345.png");
+}
+
+#review {
+    display: block;
+    padding: 10px;
+    margin-bottom: 100px; /* SIMPLY SET THIS PROPERTY AS MUCH AS YOU WANT. This changes the space below box1 */
+    text-align: justify;
+}
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+                width: 70%;
+                margin: auto;
+            }
+            body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
