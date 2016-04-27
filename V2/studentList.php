@@ -7,7 +7,6 @@
     </head>
     
    <body>
-       
         <div class="container">
             <div class="jumbotron container-fluid">
                 <div class="row">
@@ -67,9 +66,45 @@
             
             
             
-             <div>
-                 
-                 
+             <div class="row">
+                 <div class="col-md-2 col-md-offset-5">
+                 <?php
+                    $con = mysql_connect("localhost","seniorgato","");
+        if(!$con){
+            die("Can't Connect:" . mysql_error());
+        }
+        mysql_select_db("c9",$con);
+        
+        
+        $sql= "SELECT * FROM `TABLE 2`";
+        $myData=mysql_query($sql,$con);
+        echo "<table border =1>
+        <tr>
+        <th>LastName</th>
+        <th>FirstName</th>
+        </tr>";
+        
+        while($record = mysql_fetch_array($myData)){
+            echo "<form action=studentList.php method = post>";
+            $ln=$record['LastName'];
+            $fn=$record['FirstName'];
+            echo "<tr>";
+            echo "<td>" . "<a href='graphic.php'>$ln</a>"  ."</td>";
+            echo "<td>" . "<a href='graphic.php'>$fn</a>"  ."</td>";
+            echo "</tr>";
+            echo "</form>";
+        }
+        
+        
+        
+        
+        
+        
+        echo "</table>";
+        mysql_close($con);
+        
+                 ?>
+                 </div>
                  
              </div>
            
