@@ -1,3 +1,44 @@
+<?php
+         $con = mysql_connect("localhost","seniorgato","");
+                if(!$con){
+                    die("Can't Connect:" . mysql_error());
+                }
+                mysql_select_db("c9",$con);
+                
+        
+        
+        
+        
+        
+        $name = $_GET['ln'];
+        $result = mysql_query("SELECT * FROM `TABLE 2` WHERE lastName='$name' LIMIT 1");
+        
+        $row = mysql_fetch_array($result);
+        
+        echo $row['firstName'];
+        echo $_GET['ln'];
+        
+        $CalcI= $row['MAT251CalcI'];
+        $CalcII=$row['MAT252CalcII'];
+        $DiscreteMath=$row['MAT320DiscreteMath'];
+        $CPSI=$row['CPS210CompSciI'];
+        $CPSII=$row['CPS310CompSciII'];
+        $CPSIII=$row['CPS315CompSciIII'];
+        $OOP=$row['CPS352OOP'];
+        $Assembly=$row['CPS330AssemblyArch'];
+        $SoftwareEng=$row['CPS353SoftEng'];
+        $DCA=$row['CPS415DiscContAlgorithms'];
+        $OPSys=$row['CPS340OPSys'];
+        $LP=$row['CPS425LangProcessing'];
+        $Elect1=$row['CPS493Elect1'];
+        $Projects=$row['CPS493Projects'];
+        $DigLogic=$row['EGC230DigLogic'];
+        $DLlab=$row['EGC208DigLogicLab'];
+        $SciI=$row['SCIENCEI'];
+        $SciII=$row['SCIENCEII'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -21,7 +62,8 @@
                       <li>					
                         <ul class="director">
                           <li>
-                            <a href="#"><span>CPS I</span></a>
+                            <a href="#"><span>CPS I</span> <span><?php echo "$CPSI";?></span></a>
+                           
                              <ul class="subdirector">
                       <li><a href="studentList.php"><span>Go Back</span></a></li>
                             </ul>
@@ -33,7 +75,7 @@
                                 <a href="#"><span>Knowledge Part 1</span></a>
                                 <ul class="sections">
                                   <li class="section"><a href="#"><span>Assembly & Architecture</span></a></li>
-                                  <li class="section"><a href="#"><span>CS-3</span></a></li>
+                                  <li class="section"><a href="#"><span>CS III</span></a></li>
                                   <li class="section"><a href="#"><span>Object Oriented Programming</span></a></li>
                                   <li class="section"><a href="#"><span>Discrete Math for CS</span></a></li>
                                 </ul>
@@ -81,7 +123,7 @@
                     </ul>			
                   </figure>
                 </div>
-       
+
     </body>
 
 </html>

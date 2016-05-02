@@ -1,3 +1,11 @@
+<?php
+    
+?>
+
+
+
+
+
 <!DOCTYPE>
 <html>
     <head>
@@ -68,7 +76,12 @@
             
              <div class="row">
                  <div class="col-md-2 col-md-offset-5">
+                     
+                     
+                     
                  <?php
+
+                 
                     $con = mysql_connect("localhost","seniorgato","");
         if(!$con){
             die("Can't Connect:" . mysql_error());
@@ -88,9 +101,12 @@
             echo "<form action=studentList.php method = post>";
             $ln=$record['LastName'];
             $fn=$record['FirstName'];
+            
+  
+
             echo "<tr>";
-            echo "<td>" . "<a href='graphic.php'>$ln</a>"  ."</td>";
-            echo "<td>" . "<a href='graphic.php'>$fn</a>"  ."</td>";
+            echo "<td>" . "<a href='graphic.php?ln=$ln'>$ln</a>"  ."</td>";
+            echo "<td>" . "$fn"  ."</td>";
             echo "</tr>";
             echo "</form>";
         }
