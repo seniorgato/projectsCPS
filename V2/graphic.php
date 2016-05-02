@@ -15,7 +15,7 @@
         
         $row = mysql_fetch_array($result);
         
-        echo $row['firstName'];
+        echo "<h1>". $row['FirstName']. "</h1>";
         echo $_GET['ln'];
         
         $CalcI= $row['MAT251CalcI'];
@@ -36,6 +36,8 @@
         $DLlab=$row['EGC208DigLogicLab'];
         $SciI=$row['SCIENCEI'];
         $SciII=$row['SCIENCEII'];
+        
+        //HOW TO INSERT PHP DATA INTO HTML PARTS -> <span><?php echo "$CPSI";?></span>
 
 ?>
 
@@ -62,7 +64,7 @@
                       <li>					
                         <ul class="director">
                           <li>
-                            <a href="#"><span>CPS I</span> <span><?php echo "$CPSI";?></span></a>
+                            <a href="#"><span>CPS I</span></a>
                            
                              <ul class="subdirector">
                       <li><a href="studentList.php"><span>Go Back</span></a></li>
