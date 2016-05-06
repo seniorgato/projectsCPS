@@ -89,7 +89,7 @@
                 </center>
             </div>
             
- 
+             <div>If Successful, you will be sent to the Student List! If not please retry!</div>
            
             
             <div>

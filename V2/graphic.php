@@ -15,8 +15,9 @@
         
         $row = mysql_fetch_array($result);
         
-        echo "<h1>". $row['FirstName']. "</h1>";
-        echo $_GET['ln'];
+        echo "<h1>". $_GET['ln'] .",". "</h1>";
+        echo "<h2>". $row['FirstName']. "</h2>";
+        
         
         $CalcI= $row['MAT251CalcI'];
         $CalcII=$row['MAT252CalcII'];
@@ -24,6 +25,7 @@
         $CPSI=$row['CPS210CompSciI'];
         $CPSII=$row['CPS310CompSciII'];
         $CPSIII=$row['CPS315CompSciIII'];
+        
         $OOP=$row['CPS352OOP'];
         $Assembly=$row['CPS330AssemblyArch'];
         $SoftwareEng=$row['CPS353SoftEng'];
@@ -37,8 +39,68 @@
         $SciI=$row['SCIENCEI'];
         $SciII=$row['SCIENCEII'];
         
-        //HOW TO INSERT PHP DATA INTO HTML PARTS -> <span><?php echo "$CPSI";?></span>
+            
+                                                              $color = "#FF3333";
+    
+                                                              if ($CalcI!='')
+                                                                 $CalcIG = "green";
+                                                                 
+                                                              if ($CalcII!='')
+                                                                 $CalcIIG = "green";
+                                                              
+                                                              if ($DiscreteMath!='')
+                                                                 $DiscreteMathG = "green";
+                                                              
+                                                              if ($CPSI!='')
+                                                                 $CPSIG = "green";
+                                                              
+                                                              if ($CPSII!='')
+                                                                 $CPSIIG = "green";
+                                                                 
+                                                              if ($CPSIII!='')
+                                                                 $CPSIIIG = "green";
+                                                                 
+                                                              if ($OOP!='')
+                                                                 $OOPG = "green";
+                                                                 
+                                                              if ($Assembly!='')
+                                                                 $AssemblyG = "green";
+                                                                 
+                                                              if ($SoftwareEng!='')
+                                                                 $SoftwareEngG = "green";
+                                                                 
+                                                              if ($DCA!='')
+                                                                 $DCAG = "green";
+                                                                 
+                                                              if ($OPSys!='')
+                                                                 $OPSysG = "green";
+                                                                 
+                                                              if ($LP!='')
+                                                                 $LPG = "green";
+                                                              
+                                                              if ($Elect1!='')
+                                                                 $Elect1G = "green";
+                                                                 
+                                                              if ($Projects!='')
+                                                                 $ProjectsG = "green";
+                                                                 
+                                                              if ($DigLogic!='')
+                                                                 $DigLogicG = "green";
+                                                                 
+                                                              if ($DLlab!='')
+                                                                 $DLlabG = "green";
+                                                                 
+                                                              if ($SciI!='')
+                                                                 $SciIG = "green";
+                                                                 
+                                                              if ($SciII!='')
+                                                                 $SciIIG = "green";
+                                                          
+                                                                 
 
+    
+   
+   
 ?>
 
 <!DOCTYPE html>
@@ -64,57 +126,61 @@
                       <li>					
                         <ul class="director">
                           <li>
-                            <a href="#"><span>CPS I</span></a>
-                           
+                             <a href="#"style="background-color:<?php echo $CPSIG;?>"><span>CPS I</span></a></li>
+                           <!-- <a href="javascript:window.open('grades.php?ln=<?php echo $name ?> & Class=<?php echo CPS210CompSciI?> & ClassGrade=<?php echo $CPSI?>','mywindowtitle','width=500,height=150')"><span onclick="myFunctionCPSI()">CPS I</span></a>-->
+                
+                             
+                             
+                             
                              <ul class="subdirector">
                       <li><a href="studentList.php"><span>Go Back</span></a></li>
                             </ul>
                             <ul class="departments cf">								
-                              <li><a href="#"><span>CPS II</span></a></li>
+                              <li><a href="#"style="background-color:<?php echo $CPSIIG;?>"><span>CPS II</span></a></li>
                               
                               
                               <li class="department dep-a">
                                 <a href="#"><span>Knowledge Part 1</span></a>
                                 <ul class="sections">
-                                  <li class="section"><a href="#"><span>Assembly & Architecture</span></a></li>
-                                  <li class="section"><a href="#"><span>CS III</span></a></li>
-                                  <li class="section"><a href="#"><span>Object Oriented Programming</span></a></li>
-                                  <li class="section"><a href="#"><span>Discrete Math for CS</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $AssemblyG;?>"><span>Assembly & Architecture</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $CPSIIIG;?>"><span>CS III</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $OOPG;?>"><span>Object Oriented Programming</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $DiscreteMathG;?>"><span>Discrete Math for CS</span></a></li>
                                 </ul>
                               </li>
                               <li class="department dep-b">
                                 <a href="#"><span>Knowledge Part 2</span></a>
                                 <ul class="sections">
-                                  <li class="section"><a href="#"><span>Operating Systems</span></a></li>
-                                  <li class="section"><a href="#"><span>Language Processing</span></a></li>
-                                  <li class="section"><a href="#"><span>Software Engineering</span></a></li>
-                                  <li class="section"><a href="#"><span>Discrete & Continuous Algorithms</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $OPSysG;?>"><span>Operating Systems</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $LPG;?>"><span>Language Processing</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $SoftwareEngG;?>"><span>Software Engineering</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $DCAG;?>"><span>Discrete & Continuous Algorithms</span></a></li>
 
                                 </ul>
                               </li>
                               <li class="department dep-c">
                                 <a href="#"><span>Math, Science, & Engineering</span></a>
                                 <ul class="sections">
-                                  <li class="section"><a href="#"><span>Calculus I</span></a></li>
-                                  <li class="section"><a href="#"><span>Calculus II</span></a></li>
-                                  <li class="section"><a href="#"><span>Science I</span></a></li>
-                                  <li class="section"><a href="#"><span>Science II</span></a></li>
-                                  <li class="section"><a href="#"><span>Digital Logic Design</span></a></li>
-                                  <li class="section"><a href="#"><span>Digital Logic Lab</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $CalcIG;?>"><span >Calculus I</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $CalcIIG;?>"><span>Calculus II</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $SciIG;?>"><span>Science I</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $SciIIG;?>"><span>Science II</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $DigLogicG;?>"><span>Digital Logic Design</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $DLlabG;?>"><span>Digital Logic Lab</span></a></li>
                                 </ul>
                               </li>
                               <li class="department dep-d">
                                 <a href="#"><span>Skills (Electives)</span></a>
                                 <ul class="sections">
-                                  <li class="section"><a href="#"><span>Database</span></a></li>
-                                  <li class="section"><a href="#"><span>Web Programming</span></a></li>
-                                  <li class="section"><a href="#"><span>Networks</span></a></li>
-                                  <li class="section"><a href="#"><span>AI/Robotics</span></a></li>
-                                  <li class="section"><a href="#"><span>Embedded Linux</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $Elect1G;?>"><span>Database</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $Elect1G;?>"><span>Web Programming</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $Elect1G;?>"><span>Networks</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $Elect1G;?>"><span>AI/Robotics</span></a></li>
+                                  <li class="section"><a href="#"style="background-color:<?php echo $Elect1G;?>"><span>Embedded Linux</span></a></li>
                                 </ul>
                               </li>
                               <li class="department dep-e">
-                                <a href="#"><span>Projects CPS</span></a>
+                                <a href="#"style="background-color:<?php echo $ProjectsG;?>"><span>Projects CPS</span></a>
                                 <ul class="sections">
                                 </ul>
                               </li>

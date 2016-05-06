@@ -26,7 +26,7 @@
             
             $query = mysql_query($sql);
             if($query){
-                header("location: home.php");
+                header("location: studentList.php");
                 echo "DATABASE UPDATED!!";
             }
             else{
