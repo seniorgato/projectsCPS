@@ -64,6 +64,9 @@
                                         <li>
                                             <a href="studentList.php">Student List</a>
                                         </li>
+                                        <li>
+                                            <a href="csvDownloader.php">CSV Downloader</a>
+                                        </li>
                                         
                                     </ul>
                                 </div>

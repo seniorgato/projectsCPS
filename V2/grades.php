@@ -1,19 +1,21 @@
 <?php
-         $con = mysql_connect("localhost","seniorgato","");
-                if(!$con){
-                    die("Can't Connect:" . mysql_error());
-                }
-                mysql_select_db("c9",$con);
-                
 
-        
+                
         $name = $_GET['ln'];
         $Class=$_GET['Class'];
         $ClassGrade = $_GET['ClassGrade'];
-        echo $name;
-        echo $Class;
-        echo $ClassGrade
+      
+      
+             
+                    $con = mysql_connect("localhost","seniorgato","");
+        if(!$con){
+            die("Can't Connect:" . mysql_error());
+        }
+        mysql_select_db("c9",$con);
         
+            
+            $comment = mysql_query("SELECT Comments FROM `TABLE 2` WHERE LastName = '$name'");
+            $result = mysql_fetch_array($comment);
         
 ?>
 <!DOCTYPE html>
@@ -33,7 +35,23 @@
     </head>
     
     <body>
-
+        <h1>Classname: <?php echo $Class;?></h1>
+        <h2> Grade <?php echo $ClassGrade;?></h2>
+        
+           
+                <form action="gradesDatabase.php" method="post">
+                Name: <input type="text" value="<?php echo $name;?>" name="name">
+                Class: <input type="text"value="<?php echo $Class;?>" name="Class">
+                Grade: <input type="text" name="Grade">
+                Comments: <input type="text"name="comments">
+                <input type="submit">
+                </form>
+      <div>
+          <h1>Comments: </h1>
+      </div>
+      <p>
+          <?php echo $result['Comments'];?>
+      </p>
     </body>
 
 </html>
