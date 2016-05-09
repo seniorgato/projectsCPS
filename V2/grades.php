@@ -43,7 +43,7 @@
                 Name: <input type="text" value="<?php echo $name;?>" name="name">
                 Class: <input type="text"value="<?php echo $Class;?>" name="Class">
                 Grade: <input type="text"value="<?php echo $ClassGrade;?>" name="Grade">
-                Comments: <input type="text"name="comments">
+                Comments: <input type="text"value="<?php echo $result['Comments'];?>"name="comments">
                 <input type="submit">
                 </form>
       <div>
