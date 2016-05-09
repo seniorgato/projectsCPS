@@ -42,7 +42,7 @@
                 <form action="gradesDatabase.php" method="post">
                 Name: <input type="text" value="<?php echo $name;?>" name="name">
                 Class: <input type="text"value="<?php echo $Class;?>" name="Class">
-                Grade: <input type="text" name="Grade">
+                Grade: <input type="text"value="<?php echo $ClassGrade;?>" name="Grade">
                 Comments: <input type="text"name="comments">
                 <input type="submit">
                 </form>

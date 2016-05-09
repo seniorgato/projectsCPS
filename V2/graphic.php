@@ -30,7 +30,7 @@
         $Assembly=$row['CPS330AssemblyArch'];
         $SoftwareEng=$row['CPS353SoftEng'];
         $DCA=$row['CPS415DiscContAlgorithms'];
-        $OPSys=$row['CPS340OPSys'];
+        $OPSys=$row['CPS340OpSys'];
         $LP=$row['CPS425LangProcessing'];
         $Elect1=$row['CPS493Elect1'];
         $Projects=$row['CPS493Projects'];
@@ -155,7 +155,7 @@
                               <li class="department dep-b">
                                 <a href="#"><span>Knowledge Part 2</span></a>
                                 <ul class="sections">
-                                  <li class="section"><a href="grades.php?ln=<?php echo $name;?> & Class=<?php echo CPS340OPSys?> & ClassGrade=<?php echo $OPSys?>"style="background-color:<?php echo $OPSysG;?>"><span>Operating Systems</span></a></li>
+                                  <li class="section"><a href="grades.php?ln=<?php echo $name;?> & Class=<?php echo CPS340OpSys?> & ClassGrade=<?php echo $OPSys?>"style="background-color:<?php echo $OPSysG;?>"><span>Operating Systems</span></a></li>
                                   <li class="section"><a href="grades.php?ln=<?php echo $name;?> & Class=<?php echo CPS425LangProcessing?> & ClassGrade=<?php echo $LP?>"style="background-color:<?php echo $LPG;?>"><span>Language Processing</span></a></li>
                                   <li class="section"><a href="grades.php?ln=<?php echo $name;?> & Class=<?php echo CPS353SoftEng?> & ClassGrade=<?php echo $SoftwareEng?>"style="background-color:<?php echo $SoftwareEngG;?>"><span>Software Engineering</span></a></li>
                                   <li class="section"><a href="grades.php?ln=<?php echo $name;?> & Class=<?php echo CPS415DiscContAlgorithms?> & ClassGrade=<?php echo $DCA?>"style="background-color:<?php echo $DCAG;?>"><span>Discrete & Continuous Algorithms</span></a></li>
